@@ -8,6 +8,8 @@ services:
       - ./exports:/out
     environment:
       - TZ=${EXPORT_TIMEZONE:-Europe/Paris}
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - DISCORD_CHANNEL_ID=${DISCORD_CHANNEL_ID}
     env_file:
       - .env
     # Le conteneur ne démarre pas automatiquement car il nécessite des commandes spécifiques
