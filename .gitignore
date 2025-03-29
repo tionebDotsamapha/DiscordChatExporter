@@ -10,3 +10,13 @@ obj/
 
 # Test results
 TestResults/
+
+# Fichiers d'environnement
+.env
+
+# Dossier des exports
+exports/
+
+# Fichiers système
+.DS_Store
+Thumbs.db

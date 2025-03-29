@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  discord-exporter:
+    image: tyrrrz/discordchatexporter
+    container_name: discord-exporter
+    volumes:
+      - ./exports:/out
+    environment:
+      - TZ=${EXPORT_TIMEZONE:-Europe/Paris}
+    env_file:
+      - .env
+    # Le conteneur ne démarre pas automatiquement car il nécessite des commandes spécifiques
+    # pour l'export. Il sera utilisé via docker-compose run
+    command: tail -f /dev/null 
